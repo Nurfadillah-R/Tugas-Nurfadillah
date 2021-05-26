@@ -4,6 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.room.*
 
 interface NoteDao {
+    abstract fun getNotes(): LiveData<List<Note>>?
+    abstract fun insertNote(note: Note)
+    abstract fun deleteNote(note: Note)
+    abstract fun updateNote(note: Note)
     package com.example.myapplication
 
     import androidx.lifecycle.LiveData
